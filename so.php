@@ -11,12 +11,12 @@ Cho biết vị trí của các phần tử đó. -->
 </head>
 <body>
 <?php
-    $array = [1,2,3,4,5,6,7,8,9,190];
+    $array = [199,2,3,4,5,6,7,8,9,189];
     $max= $array[0];
     $min= $array[0];
     $position_max = 0;
     $position_min = 0;
-    for($i=1;$i<count($array);$i++)
+    for($i=0;$i<count($array);$i++)
     {
             if ($array[$i]>$max){
                 $max=$array[$i];
@@ -29,6 +29,6 @@ Cho biết vị trí của các phần tử đó. -->
         }
     echo"Giá trị lớn nhất là $max,tại vị trí $position_max <br>";
     echo"Giá trị nhỏ nhất là $min,tại vị trí $position_min";
-   ?> 
+?> 
 </body>
 </html>
