@@ -10,12 +10,17 @@ Cho biết vị trí của các phần tử đó. -->
     <title>Hi Tai</title>
 </head>
 <body>
+    <input type="text" name="chuoi" placeholder="Nhập chuỗi bất kì">
+    <button type="text" name="btn">Kết quả</button>
 <?php
-    $array = [199,2,3,4,5,6,7,8,9,189];
+if(isset($_POST['btn']))
+    // $so_nguyen =  array(199,2,3,4,5,6,7,8,9,189);
     $max= $array[0];
     $min= $array[0];
+
     $position_max = 0;
     $position_min = 0;
+
     for($i=0;$i<count($array);$i++)
     {
             if ($array[$i]>$max){
@@ -27,8 +32,8 @@ Cho biết vị trí của các phần tử đó. -->
                 $position_min=$i;
             }
         }
-    echo"Giá trị lớn nhất là $max,tại vị trí $position_max <br>";
-    echo"Giá trị nhỏ nhất là $min,tại vị trí $position_min";
+    echo"Giá trị lớn nhất là $max,tại vị trí $position_max";
+    echo"Giá trị nhỏ nhất là $min, tại vị trí $position_min";
 ?> 
 </body>
 </html>

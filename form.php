@@ -14,20 +14,24 @@
     <h2>Member login</h2>
     <input type="text" placeholder="Username" name="username">
     <input type="password" placeholder="Password"  name="password">
+    <inpput type='text' name='tc'></inpput>
     <button type="submit" name="btn">Login</button>
-    <div id='show'></div>
+    
     </form>
   <?php
-   if( isset($_POST['btn'])){
+   if(isset($_POST['btn'])){
     $username = $_POST['username'];  
-    $password = $_POST['password'];  
-    if ($username =='Ho Thi Tai' && $password == '1234' ){
-      // echo"<script>document.getElementById('show').innerHTML='Chúc mừng bạn đã đăng nhập thành công'  </script>";
-      echo"<script> alert('Đăng nhập thành công') </script>";
+    $password = $_POST['password']; 
+    $name=$_POST['tc'];
+
+    if ($username =='Ho Thi Tai' ){
+
+      echo"<script> alert( 'password không tồn tại')</script>";
+    if($password=='5678') 
+      echo"<script> alert('Username không tồn tại') </script>";
     }
-    else {
-      echo"<script> alert('Đăng nhập thất bại') </script>";
-      // echo"<script> document.getElementById('show').innerHTML=' Bạn đăng nhập không thành công' </script>";
+    else{
+      echo"<script> alert('Đăng nhập thành công') </script>";
     }
    }
   ?>
